@@ -4,35 +4,32 @@
 
 let deferredPrompt;
 
-window.addEventListener("beforeinstallprompt", (e) => {
-    // Prevent the mini-infobar from appearing on mobile
-    e.preventDefault();
-    // Stash the event so it can be triggered later
-    deferredPrompt = e;
-    // Update UI to notify the user they can install the PWA
-    userPromptInstallation(deferredPrompt);
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault()
+  deferredPrompt = e
 });
 
+let btnInstallApp = document.getElementById('clickButton')
 
-function userPromptInstallation(deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-	    console.log('User accepted the install prompt');
+if(btnInstallApp) {
+  btnInstallApp.addEventListener('click', e => {
+    deferredPrompt.prompt()
+    deferredPrompt.userChoice
+      .then(choiceResult => {
+        if(choiceResult.outcome === 'accepted') {
+          console.log('user accepted A2HS prompt')
         } else {
-          console.log('User dismissed the install prompt');
+          console.log('user dismissed A2HS prompt')
         }
+        deferredPrompt = null
+      })
     })
 }
 
-function showInstallPromotion(deferredPrompt) {
-    let button = document.getElementById("clickButton");
-    button.addEventListener("click", (e) => {
-	userPromptInstallation(deferredPrompt);
-   });
-}
 
 // Listen for and confirm when the PWA is installed
 window.addEventListener('appinstalled', (evt) => {
     console.log('add to home screen installed');
 });
+
+
