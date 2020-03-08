@@ -25,8 +25,8 @@ function addToHomeScreen() {
     })
 }
 
-let dismiss = document.querySelector(".dismiss");
-window.addEventListener("click", dismiss, e => {
+const dismiss = document.querySelector(".dismiss");
+dismiss.addEventListener("click", e => {
   console.log('the dismiss button was clicked');
   a2hsBtn.style.display = "none";
 })
