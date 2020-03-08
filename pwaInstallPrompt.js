@@ -40,7 +40,7 @@ function showIosInstall() {
 
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
-  const btnInstallApp = document.getElementById('a2hs-button');
+  const btnInstallApp = document.getElementById('a2hs-prompt');
   btnInstallApp.addEventListener('click', e => {
     btnInstallApp.style.display = 'none';
     deferredPrompt.prompt()
