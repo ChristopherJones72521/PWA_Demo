@@ -6,7 +6,7 @@ View working demo at: https://pwa.hackathonmentors.dev/
 There are several checks which need to take place before presenting install prompt
 * Is the user already browsing this website using a PWA? (do not prompt to install)
 * Is the user using an iOS device? (Apple does not support JS events like beforeinstallprompt. A different flow is required)
-** We'll need to store the iOS user dismissal so they aren't prompted again
+* We'll need to store the iOS user dismissal so they aren't prompted again
 * Has the user dismissed this prompt before? (will need to store user selection in cookie. Did not do this for POC)
 
 ### Approach
