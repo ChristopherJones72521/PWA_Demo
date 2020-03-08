@@ -18,6 +18,7 @@ if ("serviceWorker" in navigator) {
 }
 
 // This checks if the protocol is https and displays a warning if not
+// Probably not necessary for nyrr.org
 if (window.location.protocol === 'http:') {
 	  const requireHTTPS = document.getElementById('requireHTTPS');
 	  const link = requireHTTPS.querySelector('a');
