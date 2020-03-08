@@ -10,6 +10,11 @@
   display: none !important;
 }
 
+.nyrr-site {
+  width: 100%;
+  height: 100%;
+}
+
 #poc-title {
     font-family: helvetica, sans-serif;
     text-align: center;
