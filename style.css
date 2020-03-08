@@ -18,9 +18,6 @@
     padding: 8px;
     margin: 100px auto;
 }
-#a2hs-button:hover {
-    cursor: pointer;
-}
 
 /* Be sure to update the names of these classes */
 #a2hs-prompt {
@@ -39,6 +36,10 @@
   right: 0;
   bottom: 0;
   width: calc(100% - 32px);
+}
+
+#a2hs-prompt:hover {
+    cursor: pointer;
 }
 
 .ios-prompt {
