@@ -11,12 +11,11 @@
 }
 
 .prompt-text {
-  display: inline;
+  margin: 0;
   float: left;
 }
 
 .dismiss {
-  display:inline;
   float: right;
   margin: 0;
   color: inherit;
