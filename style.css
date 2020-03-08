@@ -12,7 +12,10 @@
 
 .dismiss {
   float: right;
-  color: red;
+  color: inherit;
+  margin: 5px;
+  border: 1px #FFF solid;
+  border-radius: 5px;
 }
 
 .nyrr-site {
