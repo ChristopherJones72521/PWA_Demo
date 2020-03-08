@@ -18,4 +18,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
 
 **TODO:** Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
 
-**Issue:** When the user makes a selection to install or dismiss the pop-up, the install prompt re-appears. To solve this I've created a variable which will be checked (userSelected) before triggering the install prompt flow again. 
+**Issue:** When the user makes a selection to install or dismiss the pop-up, the install prompt re-appears. To solve this I've created a variable which will be checked (userSelected) before triggering the install prompt flow again. I just feel like this isn't supposed to happen in the first place.
