@@ -16,6 +16,7 @@
 }
 
 .dismiss {
+  display: none;
   color: #FFF;
   font-family: helvetica, sans-serif;
   padding: 10px;
