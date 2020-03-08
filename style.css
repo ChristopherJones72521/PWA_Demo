@@ -11,7 +11,7 @@
 }
 
 .dismiss {
-  float: right;
+  display:inline;
   color: inherit;
   padding: 10px;
   border: 1px #FFF solid;
