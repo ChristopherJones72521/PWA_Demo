@@ -16,7 +16,8 @@
 }
 
 .dismiss {
-  color: inherit;
+  color: #FFF;
+  font-family: helvetica, sans-serif;
   padding: 10px;
   border: 1px #FFF solid;
   border-radius: 5px;
@@ -24,6 +25,10 @@
   margin: 20px;
   right: 0;
   bottom: 0;
+}
+
+#a2hs-prompt:hover {
+    cursor: pointer;
 }
 
 .nyrr-site {
