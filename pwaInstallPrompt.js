@@ -2,7 +2,7 @@
 // This script is meant to prompt the user to install this PWA to their device //
 /////////////////////////////////////////////////////////////////////////////////
 
-const deferredPrompt;
+let deferredPrompt;
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
