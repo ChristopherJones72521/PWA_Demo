@@ -5,10 +5,11 @@
 let deferredPrompt;
 const a2hsBtn = document.querySelector("#a2hs-prompt");
 let userSelected = false;
-
+console.log(userSelected);
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
   // This if statment is only necessary to prevent the prompt from reappearing
+  console.log(userSelected + 'inside beforeinstallprompt event');
   if !userSelected {
     console.log('beforeinstallprompt fired again');
     // Prevent Chrome 67 and earlier from automatically showing the prompt
