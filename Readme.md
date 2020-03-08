@@ -4,9 +4,9 @@ View working demo at: https://pwa.hackathonmentors.dev/
 
 ### Considerations
 There are several checks which need to take place before presenting install prompt
-* Is the user already browsing this website using a PWA (do not prompt to install)
-* Is the user using an iOS device (Apple does not support JS events like beforeinstallprompt. A different flow is required)
-* Has the user dismissed this prompt before (will need to store user selection in cookie. Did not do this for POC)
+* Is the user already browsing this website using a PWA? (do not prompt to install)
+* Is the user using an iOS device? (Apple does not support JS events like beforeinstallprompt. A different flow is required)
+* Has the user dismissed this prompt before? (will need to store user selection in cookie. Did not do this for POC)
 
 ### Approach
 * One will display for iOS devices instructing them how to install to home Screen
