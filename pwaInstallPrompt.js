@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 let deferredPrompt;
-const a2hsBtn = document.querySelector(".a2hs-prompt");
+const a2hsBtn = document.querySelector("#a2hs-prompt");
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
