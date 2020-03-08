@@ -16,6 +16,6 @@ There are several checks which need to take place before presenting install prom
 The beforeinstallprompt event will fire if the app is installable. These requirements should be met (list requirements). This event will trigger a prompt to install as PWA.
 https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
 
-_TODO:_ Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
+*TODO:* Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
 
-_Issue:_ When the user makes a selection to install or dismiss the pop-up, the install prompt re-appears. To solve this I've created a variable which will be checked (userSelected) before triggering the install prompt flow again. 
+*Issue:* When the user makes a selection to install or dismiss the pop-up, the install prompt re-appears. To solve this I've created a variable which will be checked (userSelected) before triggering the install prompt flow again. 
