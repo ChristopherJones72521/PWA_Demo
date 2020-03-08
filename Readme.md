@@ -9,8 +9,8 @@ There are several checks which need to take place before presenting install prom
 * Has the user dismissed this prompt before? (will need to store user selection in cookie. Did not do this for POC)
 
 ### Approach
-* One will display for iOS devices instructing them how to install to home Screen
-* One will display for all other devices prompting them to install
+* Will display one pop-up for iOS devices instructing them how to install to home Screen
+* Will display another pop-up for all other devices prompting them to install
 
 
 The beforeinstallprompt event will fire if the app is installable. These requirements should be met (list requirements). This event will trigger a prompt to install as PWA.
