@@ -10,7 +10,7 @@ console.log(userSelected);
 window.addEventListener('beforeinstallprompt', e => {
   // This if statment is only necessary to prevent the prompt from reappearing
   console.log(userSelected + 'inside beforeinstallprompt event');
-  if !userSelected {
+  if (!userSelected) {
     console.log('beforeinstallprompt fired again');
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
