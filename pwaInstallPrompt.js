@@ -25,9 +25,14 @@ function addToHomeScreen() {
     })
 }
 
+let dismiss= document.querySelector(".dismiss");
+window.addEventListener("click", dismiss, e => {
+  a2hsBtn.style.display = "none";
+})
+
 // Displays the prompt to install and will trigger installation if clicked
 function showAddToHomeScreen() {
-  console.log('the showAddToHomeScreen function is being called');
+  console.log("the showAddToHomeScreen function is being called");
   // display is none by default. This will display the prompt
   a2hsBtn.style.display = "block";
   a2hsBtn.addEventListener("click", addToHomeScreen);
