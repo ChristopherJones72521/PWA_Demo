@@ -25,8 +25,9 @@ function addToHomeScreen() {
     })
 }
 
-let dismiss= document.querySelector(".dismiss");
+let dismiss = document.querySelector(".dismiss");
 window.addEventListener("click", dismiss, e => {
+  console.log('the dismiss button was clicked');
   a2hsBtn.style.display = "none";
 })
 
@@ -80,6 +81,6 @@ function showIosInstall() {
 }
 
 // Listen for and confirm when the PWA is installed
-window.addEventListener('appinstalled', (evt) => {
+window.addEventListener('appinstalled', e => {
     console.log('add to home screen installed');
 });
