@@ -13,3 +13,5 @@ There will be a check to see if it is an iOS devices
 TODO: Find a way to remember user selection on iOS if they choose not to install to home screen
 
 TODO: Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
+
+Issue: When the user makes a selection to install or dismiss the pop-up, the install prompt re-appears. To solve this I've created a variable which will be checked (userSelected) before triggering the install prompt flow again. 

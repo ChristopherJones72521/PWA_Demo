@@ -4,16 +4,20 @@
 
 let deferredPrompt;
 const a2hsBtn = document.querySelector("#a2hs-prompt");
+let userSelected = false;
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
-  console.log('beforeinstallprompt fired again');
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // This event doesn't fire in iOS, so we can trigger the alternative flow here
-  showAddToHomeScreen();
+  // This if statment is only necessary to prevent the prompt from reappearing
+  if !userSelected {
+    console.log('beforeinstallprompt fired again');
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // This event doesn't fire in iOS, so we can trigger the alternative flow here
+    showAddToHomeScreen();
+  }
 });
 
 // Triggers add to home screen prompt (non-iOS)
@@ -25,8 +29,10 @@ function addToHomeScreen() {
     .then(choiceResult => {
       if(choiceResult.outcome === 'accepted') {
         console.log('user accepted A2HS prompt')
+        userSelected = true;
       } else {
         console.log('user dismissed A2HS prompt')
+        userSelected = true;
       }
       console.log('setting deferredPrompt to NULL')
       deferredPrompt = null;
