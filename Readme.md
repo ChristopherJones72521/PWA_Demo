@@ -13,7 +13,7 @@ There are several checks which need to take place before presenting install prom
 * Will display one pop-up for iOS devices instructing them how to install to home Screen
 * Will display another pop-up for all other devices prompting them to install
 * Will disable pop-up if app is being viewed as PWA 
-* I've set a rule in the CSS to turn the background color yellow if viewed in standalone mode
+* I've set a rule in the CSS to turn the background color yellow if viewed in standalone mode (as a PWA)
 
 The beforeinstallprompt event will fire if the app is installable. These requirements should be met. This event will trigger a prompt to install as PWA.
 https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
