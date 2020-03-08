@@ -25,8 +25,8 @@ function showAddToHomeScreen() {
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   console.log('the addToHomeScreen function is being called');
-  btnInstallApp.addEventListener('click', e => {
-    btnInstallApp.style.display = 'none';
+  a2hsBtn.addEventListener('click', e => {
+    a2hsBtn.style.display = 'none';
     deferredPrompt.prompt()
     deferredPrompt.userChoice
       .then(choiceResult => {
