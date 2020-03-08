@@ -2,15 +2,15 @@
 // This script is meant to prompt the user to install this PWA to their device //
 /////////////////////////////////////////////////////////////////////////////////
 
-let ;
-const a2hsBtn = document.querySelector("#a2hs-prompt");
+let deferredPrompt;
+const a2hsBtn = document.querySelector("a2hs-prompt");
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault()
   // Stash the event so it can be triggered later.
-   = e
+  deferredPrompt = e
   // This event doesn't fire in iOS, so we can trigger the alternative flow here
   showAddToHomeScreen();
 });
@@ -25,8 +25,8 @@ function showAddToHomeScreen() {
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   console.log('the addToHomeScreen function is being called');
-  a2hsBtn.addEventListener('click', e => {
-    a2hsBtn.style.display = 'none';
+  btnInstallApp.addEventListener('click', e => {
+    btnInstallApp.style.display = 'none';
     deferredPrompt.prompt()
     deferredPrompt.userChoice
       .then(choiceResult => {
@@ -35,7 +35,7 @@ function addToHomeScreen() {
         } else {
           console.log('user dismissed A2HS prompt')
         }
-         = null
+        deferredPrompt = null
       })
     });
 }
