@@ -12,8 +12,7 @@ window.addEventListener('beforeinstallprompt', e => {
   deferredPrompt = e
 });
 
-
-
+// Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   const btnInstallApp = document.getElementById('a2hs-button');
   btnInstallApp.addEventListener('click', e => {

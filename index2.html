@@ -38,7 +38,7 @@
         bottom: 0;
         width: calc(100% - 32px);
       }
-      
+
       .ios-prompt {
         background-color: #fcfcfc;
         border: 1px solid #666;
@@ -70,7 +70,7 @@
   <script type="text/javascript" src="runtime.js"></script>
   <script type="text/javascript" src="polyfills.js"></script>
   <script type="text/javascript" src="main.js"></script>
-    
+
   <script type="text/javascript">
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
@@ -112,7 +112,7 @@
 
         showAddToHomeScreen();
       });
-    
+
       function showIosInstall() {
         let iosPrompt = document.querySelector(".ios-prompt");
         iosPrompt.style.display = "block";
@@ -120,7 +120,7 @@
           iosPrompt.style.display = "none";
         });
       }
-    
+
       // Detects if device is on iOS
       const isIos = () => {
         const userAgent = window.navigator.userAgent.toLowerCase();
@@ -138,4 +138,3 @@
     </script>
 </body>
 </html>
-
