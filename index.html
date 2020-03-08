@@ -7,12 +7,11 @@
     <meta name="theme-color" content="#FFF"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Progressive Web App - Install Demo</title>
+    <title>NYRR Progressive Web App - Installation Demo</title>
     <link rel="apple-touch-icon" href="images/icons/AppIcon_180x180.png">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="registerServiceWorker.js"></script>
 </head>
 <body>
     <!--
@@ -27,16 +26,16 @@
       Please <a>reload this page via HTTPS</a>.
     </p>
 
+    <!-- POC Label on site -->
     <h1 id="poc-title">PWA Installation POC</h1>
 
-    <!-- This button triggers the a2hs dialog -->
+    <!-- a2hs Prompt-->
     <div>
       <button type="button" id="a2hs-prompt">
         <h3 class="prompt-text">Click to Install PWA</h3>
       </button>
       <h3 class="dismiss">Dismiss</h3>
     </div>
-
 
     <!-- iOS Prompt -->
     <div class="ios-prompt">
@@ -45,6 +44,7 @@
       <p style="margin-top: -3px; line-height: 1.3rem;">To install this Web App using mobile Safari press <img src="images/share.svg" style="display: inline-block; margin-top: 4px; margin-bottom: -4px; height: 20px; width: auto;"> and then Add to Home Screen.</p>
     </div>
 
-    <script src="pwaInstallPrompt.js"></script>
+    <script type="text/javascript" src="registerServiceWorker.js"></script>
+    <script type="text/javascript" src="pwaInstallPrompt.js"></script>
 </body>
 </html>
