@@ -27,7 +27,7 @@
   bottom: 0;
 }
 
-#a2hs-prompt:hover {
+.dismiss:hover {
     cursor: pointer;
 }
 
