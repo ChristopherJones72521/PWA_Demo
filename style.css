@@ -2,7 +2,7 @@
 /* If the PWA was launched as a PWA (rather than website) make the background-color yellow */
 @media all and (display-mode: standalone) {
     body {
-        background-color: yellow;
+        background-color: #00215a;
     }
 }
 
