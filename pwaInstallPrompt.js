@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 let deferredPrompt;
-const a2hsBtn = document.querySelector("#a2hs-prompt");
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
@@ -17,6 +16,7 @@ window.addEventListener('beforeinstallprompt', e => {
 
 function showAddToHomeScreen() {
   console.log('the showAddToHomeScreen function is being called');
+  let a2hsBtn = document.querySelector("#a2hs-prompt");
   // display is none by default. This will display the prompt
   a2hsBtn.style.display = "block";
   a2hsBtn.addEventListener("click", addToHomeScreen);
@@ -25,6 +25,7 @@ function showAddToHomeScreen() {
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   console.log('the addToHomeScreen function is being called');
+  let a2hsBtn = document.querySelector("#a2hs-prompt");
   a2hsBtn.style.display = 'none';
   deferredPrompt.prompt()
   deferredPrompt.userChoice
