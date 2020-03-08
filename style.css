@@ -16,14 +16,18 @@
 }
 
 #poc-title {
-    position: fixed;
     font-family: helvetica, sans-serif;
     text-align: center;
     color: #555;
     border: 1px solid #ddd;
     width: fit-content;
     padding: 8px;
-    margin: 100px auto;
+
+    position: absolute;
+    margin: 0 auto 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: 30px;
 }
 
 /* Be sure to update the names of these classes */
