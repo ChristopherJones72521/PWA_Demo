@@ -10,8 +10,15 @@
   display: none !important;
 }
 
+.prompt-text {
+  display: inline;
+  float: left;
+}
+
 .dismiss {
   display:inline;
+  float: right;
+  margin: 0;
   color: inherit;
   padding: 10px;
   border: 1px #FFF solid;
