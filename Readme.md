@@ -11,9 +11,10 @@ There are several checks which need to take place before presenting install prom
 ### Approach
 * Will display one pop-up for iOS devices instructing them how to install to home Screen
 * Will display another pop-up for all other devices prompting them to install
+* Will disable pop-up if app is being viewed as PWA 
+* I've set a rule in the CSS to turn the background color yellow if viewed in standalone mode
 
-
-The beforeinstallprompt event will fire if the app is installable. These requirements should be met (list requirements). This event will trigger a prompt to install as PWA.
+The beforeinstallprompt event will fire if the app is installable. These requirements should be met. This event will trigger a prompt to install as PWA.
 https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
 
 **TODO:** Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
