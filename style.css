@@ -10,8 +10,9 @@
   display: none !important;
 }
 
-#a2hs-button {
+#poc-title {
     font-family: helvetica, sans-serif;
+    text-align: center;
     color: #555;
     border: 1px solid #ddd;
     width: fit-content;

@@ -11,3 +11,5 @@ There will be a check to see if the app has already been installed as a PWA (sta
 There will be a check to see if it is an iOS devices
 
 TODO: Find a way to remember user selection on iOS if they choose not to install to home screen
+
+TODO: Do we restrict this to mobile Safari on iOS? Or display for all mobile browsers informing the user that it is something you have to do in mobile Safari
