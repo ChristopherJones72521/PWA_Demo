@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 let deferredPrompt;
+const a2hsBtn = document.querySelector(".a2hs-prompt");
 
 // Prevent default behavior and store the event
 window.addEventListener('beforeinstallprompt', e => {
@@ -10,7 +11,34 @@ window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault()
   // Stash the event so it can be triggered later.
   deferredPrompt = e
+  // This event doesn't fire in iOS, so we can trigger the alternative flow here
+  showAddToHomeScreen();
 });
+
+function showAddToHomeScreen() {
+  console.log('the showAddToHomeScreen function is being called');
+  // display is none by default. This will display the prompt
+  a2hsBtn.style.display = "block";
+  a2hsBtn.addEventListener("click", addToHomeScreen);
+}
+
+// Triggers add to home screen prompt (non-iOS)
+function addToHomeScreen() {
+  console.log('the addToHomeScreen function is being called');
+  btnInstallApp.addEventListener('click', e => {
+    btnInstallApp.style.display = 'none';
+    deferredPrompt.prompt()
+    deferredPrompt.userChoice
+      .then(choiceResult => {
+        if(choiceResult.outcome === 'accepted') {
+          console.log('user accepted A2HS prompt')
+        } else {
+          console.log('user dismissed A2HS prompt')
+        }
+        deferredPrompt = null
+      })
+    });
+}
 
 // Looks at the userAgent to determine if it is an iOS device
 const isIos = () => {
@@ -25,8 +53,6 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
 if (isIos() && !isInStandaloneMode()) {
   // this.setState({ showInstallMessage: true });
   showIosInstall();
-} else {
-  addToHomeScreen();
 }
 
 // Display the iOS install prompt
@@ -35,25 +61,8 @@ function showIosInstall() {
   iosPrompt.style.display = "block";
   iosPrompt.addEventListener("click", () => {
     iosPrompt.style.display = "none";
+    // We'll need to find a way to persist this selection
   });
-}
-
-// Triggers add to home screen prompt (non-iOS)
-function addToHomeScreen() {
-  const btnInstallApp = document.getElementById('a2hs-prompt');
-  btnInstallApp.addEventListener('click', e => {
-    btnInstallApp.style.display = 'none';
-    deferredPrompt.prompt()
-    deferredPrompt.userChoice
-      .then(choiceResult => {
-        if(choiceResult.outcome === 'accepted') {
-          console.log('user accepted A2HS prompt')
-        } else {
-          console.log('user dismissed A2HS prompt')
-        }
-        deferredPrompt = null
-      })
-    });
 }
 
 // Listen for and confirm when the PWA is installed

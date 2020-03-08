@@ -18,6 +18,7 @@
 #poc-title {
     font-family: helvetica, sans-serif;
     text-align: center;
+    -webkit-text-stroke: 1px black;
     color: red;
     border: 1px solid #ddd;
     width: fit-content;
