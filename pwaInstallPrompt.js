@@ -25,19 +25,17 @@ function showAddToHomeScreen() {
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   console.log('the addToHomeScreen function is being called');
-  a2hsBtn.addEventListener('click', e => {
-    a2hsBtn.style.display = 'none';
-    deferredPrompt.prompt()
-    deferredPrompt.userChoice
-      .then(choiceResult => {
-        if(choiceResult.outcome === 'accepted') {
-          console.log('user accepted A2HS prompt')
-        } else {
-          console.log('user dismissed A2HS prompt')
-        }
-        deferredPrompt = null
-      })
-    });
+  a2hsBtn.style.display = 'none';
+  deferredPrompt.prompt()
+  deferredPrompt.userChoice
+    .then(choiceResult => {
+      if(choiceResult.outcome === 'accepted') {
+        console.log('user accepted A2HS prompt')
+      } else {
+        console.log('user dismissed A2HS prompt')
+      }
+      deferredPrompt = null
+    })
 }
 
 // Looks at the userAgent to determine if it is an iOS device
