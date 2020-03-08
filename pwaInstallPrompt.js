@@ -34,7 +34,7 @@ dismiss.addEventListener("click", e => {
 function showAddToHomeScreen() {
   // display is none by default. This will display the prompt
   a2hsBtn.style.display = "block";
-  dismiss.style.display = "none";
+  dismiss.style.display = "block";
   a2hsBtn.addEventListener("click", addToHomeScreen);
 }
 
