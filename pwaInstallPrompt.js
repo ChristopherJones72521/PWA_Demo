@@ -5,25 +5,9 @@
 let deferredPrompt;
 const a2hsBtn = document.querySelector("#a2hs-prompt");
 let userSelected = false;
-console.log(userSelected);
-// Prevent default behavior and store the event
-window.addEventListener('beforeinstallprompt', e => {
-  // This if statment is only necessary to prevent the prompt from reappearing
-  console.log(userSelected + 'inside beforeinstallprompt event');
-  if (!userSelected) {
-    console.log('beforeinstallprompt fired again');
-    // Prevent Chrome 67 and earlier from automatically showing the prompt
-    e.preventDefault();
-    // Stash the event so it can be triggered later.
-    deferredPrompt = e;
-    // This event doesn't fire in iOS, so we can trigger the alternative flow here
-    showAddToHomeScreen();
-  }
-});
 
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
-  console.log('the addToHomeScreen function is being called');
   a2hsBtn.style.display = 'none';
   deferredPrompt.prompt()
   deferredPrompt.userChoice
@@ -48,6 +32,21 @@ function showAddToHomeScreen() {
   a2hsBtn.style.display = "block";
   a2hsBtn.addEventListener("click", addToHomeScreen);
 }
+
+// Prevent default behavior and store the event
+window.addEventListener('beforeinstallprompt', e => {
+  // This if statment is only necessary to prevent the prompt from reappearing
+  // Would be better to store this selection in a cookie
+  if (!userSelected) {
+    console.log('beforeinstallprompt fired');
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // This event doesn't fire in iOS, so we can trigger the alternative flow here
+    showAddToHomeScreen();
+  }
+});
 
 // Looks at the userAgent to determine if it is an iOS device
 const isIos = () => {

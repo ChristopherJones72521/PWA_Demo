@@ -10,6 +10,11 @@
   display: none !important;
 }
 
+.dismiss {
+  float: right;
+  color: red;
+}
+
 .nyrr-site {
   width: 100%;
   height: 1600px;

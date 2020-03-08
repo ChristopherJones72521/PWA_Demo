@@ -15,8 +15,9 @@
     <script type="text/javascript" src="registerServiceWorker.js"></script>
 </head>
 <body>
+  <!-- <iframe class="nyrr-site" src="https://nyrr.org"></iframe> -->
+
     <!-- Display this only when the user isn't using https -->
-    <!-- <iframe class="nyrr-site" src="https://nyrr.org"></iframe> -->
     <p id="requireHTTPS" class="hidden">
       <b>STOP!</b> This page <b>must</b> be served over HTTPS.
       Please <a>reload this page via HTTPS</a>.
@@ -25,7 +26,7 @@
     <h1 id="poc-title">PWA Installation POC</h1>
 
     <!-- This button triggers the a2hs dialog -->
-    <button type="button" id="a2hs-prompt">Prompt PWA Installation</button>
+    <button type="button" id="a2hs-prompt">Prompt PWA Installation <p class="dismiss">Dismiss</p></button>
 
     <!-- iOS Prompt -->
     <div class="ios-prompt">
