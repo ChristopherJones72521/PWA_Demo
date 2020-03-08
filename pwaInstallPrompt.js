@@ -26,6 +26,7 @@ function addToHomeScreen() {
 const dismiss = document.querySelector(".dismiss");
 dismiss.addEventListener("click", e => {
   a2hsBtn.style.display = "none";
+  dismiss.style.display = "none";
 })
 
 // Displays the prompt to install and will trigger installation if clicked
