@@ -18,7 +18,7 @@
 #poc-title {
     font-family: helvetica, sans-serif;
     text-align: center;
-    color: #555;
+    color: #0777da;
     border: 1px solid #ddd;
     width: fit-content;
     padding: 8px;
@@ -27,7 +27,7 @@
     margin: 0 auto 1rem;
     left: 1rem;
     right: 1rem;
-    top: 30px;
+    top: 200px;
 }
 
 /* Be sure to update the names of these classes */
