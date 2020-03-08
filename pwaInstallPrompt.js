@@ -9,6 +9,7 @@ const a2hsBtn = document.querySelector("#a2hs-prompt");
 // Triggers add to home screen prompt (non-iOS)
 function addToHomeScreen() {
   a2hsBtn.style.display = 'none';
+  dismiss.style.display = "none";
   deferredPrompt.prompt()
   deferredPrompt.userChoice
     .then(choiceResult => {
