@@ -27,8 +27,8 @@ function addToHomeScreen() {
   console.log('the addToHomeScreen function is being called');
   a2hsBtn.addEventListener('click', e => {
     a2hsBtn.style.display = 'none';
-    .prompt()
-    .userChoice
+    deferredPrompt.prompt()
+    deferredPrompt.userChoice
       .then(choiceResult => {
         if(choiceResult.outcome === 'accepted') {
           console.log('user accepted A2HS prompt')
