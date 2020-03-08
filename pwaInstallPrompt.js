@@ -34,7 +34,9 @@ function addToHomeScreen() {
       } else {
         console.log('user dismissed A2HS prompt')
       }
-      deferredPrompt = null
+      console.log('setting deferredPrompt to NULL')
+      deferredPrompt = null;
+      console.log(deferredPrompt);
     })
 }
 
